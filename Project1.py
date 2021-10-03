@@ -82,18 +82,21 @@ def trajectoire(xmax, n, v, alpha):
         lsy.append(tir(xi,v,alpha))
     return lsy
 
+etap=0
 def rechdic(l, x):
-		mid=int(len(l)/2)
-		if x==l[mid]:
-			return True
-		elif len(l)==1 and l[0]==x:
-			return True
-		elif len(l)==1 and l[0]!=x:
-			return False
-		elif x>l[mid]:
-			return rechdic(l[mid:],x)
-		else:
-			return rechdic(l[:mid],x)
+    global etap
+    etap+=1
+    mid=int(len(l)/2)
+    if x==l[mid]:
+    	return True, etap
+    elif len(l)==1 and l[0]==x:
+    	return True, etap
+    elif len(l)==1 and l[0]!=x:
+    	return False, etap
+    elif x>l[mid]:
+    	return rechdic(l[mid:],x)
+    else:
+    	return rechdic(l[:mid],x)
 
 def interpol (l,x):
     mid=((len(l)-1)*(x-l[0]))/(l[len(l)-1]-l[0])
@@ -108,8 +111,7 @@ def interpol (l,x):
         return True
     else:
         return False
-    #return mid
 
 
-print(interpol([2,5,7,12,21,26,33],2))
+print(rechdic([2,5,7,12,21,26,33],12))
 
