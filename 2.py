@@ -1,16 +1,13 @@
-#def max(li):
-#    if len(li)<=1:
-#        print('oui')
-#    elif li[0]<li[1]:
-#        del li[0]
-#        max(li)
-#    else:
-#        print('non')
-#
-#       
-#a=[1, 2, 3, 5, 6]
-#max(a)
-#import math as m
+def max(li):
+    if len(li)<=1:
+        print('oui')
+    elif li[0]<li[1]:
+        del li[0]
+        max(li)
+    else:
+        print('non')
+
+       
 #while True:
 #    a=int(input("enter a"))
 #    b=int(input("enter b"))
@@ -47,19 +44,14 @@
 #    else:
 #        print("r est trop petit")
 
-#def af_tab(a):
-#    for n in range(10):
-#        print(f"{a}*{n}={7*n}")
-#a=int(input("enter a"))
-#af_tab(a=)
+def af_tab(a):
+    for n in range(10):
+        print(f"{a}*{n}={7*n}")
 
-#def salut():
-#    n=input("enter nom ")
-#    p=input("enter prenom ")
-#    print(p+" "+n.upper()) 
-#
-#salut()
-
+def salut():
+    n=input("enter nom ")
+    p=input("enter prenom ")
+    print(p+" "+n.upper()) 
 
 c=0
 def binome (a,b):
@@ -69,8 +61,6 @@ def binome (a,b):
         return 1
     else:
         return (a/b)*binome(a-1,b-1)
-
-
 
 def nbchif (a):
     if a<10:
@@ -89,16 +79,3 @@ def racnum(a):
         return a
     else:
         return racnum(somchif(a))
-
-def motif(tex,mot):
-    if len(mot)>len(tex):
-        return False
-    else:
-        for n in range(len(mot)):
-            if mot[n]==tex[n]:
-                
-
-print(motif("nowohu","owo"))
-
-                
-
