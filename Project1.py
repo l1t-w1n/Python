@@ -112,6 +112,54 @@ def interpol (l,x):
     else:
         return False
 
+def s1(n):
+    if n==0:
+        return -2
+    else:
+        return (-1/3)*s1(n-1)+1
 
-print(rechdic([2,5,7,12,21,26,33],12))
+def somcar(n):
+    if n==1:
+        return 1
+    else:
+        return n**2+somcar(n-1)
+
+def puis(x,n):
+    if n==0:
+        return 1
+    elif n>0:
+        return x*puis(x,n-1)
+    else:
+        return puis(1/x,-n)
+
+def puisrap(x,n):
+    if n==0:
+        return 1
+    elif n%2==0:
+        return puis(x**2,n/2)
+    else:
+        return x*puis(x**2,(n-1)/2)
+
+def nbdec(n):
+    if n<10:
+        return 1
+    else:
+        return 1+nbdec(n//10)
+
+def somliste(l):
+    if len(l)==0:
+        return 0
+    else:
+        return l[0]+somliste(l[1:])
+
+def palindrome(l):
+    if len(l)==0 or len(l)==1:
+        return  True
+    elif l[0]==l[len(l)-1]:
+        return palindrome(l[1:-1])
+    else:
+        return False
+
+print(palindrome(''))
+
 
