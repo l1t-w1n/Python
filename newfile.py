@@ -18,6 +18,42 @@ def rechdic(l, x):
 		else:
 			return rechdic(l[:mid],x)
 			
-
-print(rechdic([2,5,6,7], 9))
+def list1000():
+	l=[]
+	for i in range(1000):
+		l.append(i)
+	return l
 	
+def isPrime(n):
+    if n % 2 == 0:
+        return n == 2
+    d = 3
+    while d * d <= n and n % d != 0:
+        d += 2
+    return d * d > n
+    
+def nOcc(chaine):
+	nbOcc={}
+	alph="abcdefghijklmnopqrstuvwxyz"
+	for i in alph:
+		cpt=0
+		for n in chaine:
+			if i==n:
+				cpt+=1
+		if cpt!=0:
+			nbOcc[i]=cpt
+	return nbOcc
+	
+def moy(l):
+	a=0
+	for i in l:
+		a+=i
+	return a/len(l)
+	
+def bestmoy(dic):
+	m=0
+	for val in dic.keys():
+		if moy(dic[val])>m:
+			m=moy(dic[val])
+	for cl, val in dic.items():
+		if moy
