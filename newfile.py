@@ -82,5 +82,8 @@ def pers(dic):
 		print(f"{nom[0]} {nom[1]} a {nom[2]} ans")
 		
 	
-personnes = {"Président" : {"prenom" : 			"Emmanuel", "nom" : "Macron", "age" : 43},"premier" : {"prenom" : "Jean", "nom" : 				"Castex", "age" : 56}}
-pers(personnes)
+file1=open("1.txt", "r")
+l=file1.readlines()
+for i in range(len(l)):
+	print(f"{i+1} {l[i]}")
+file1.close()
