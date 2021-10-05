@@ -45,9 +45,12 @@ def nOcc(chaine):
 	return nbOcc
 	
 def moy(l):
-	a=0
-	for i in l:
-		a+=i
+	if len(l)==0:
+		return 0
+	else:
+		a=0
+		for i in l:
+			a+=i
 	return a/len(l)
 	
 def bestmoy(dic):
@@ -56,4 +59,28 @@ def bestmoy(dic):
 		if moy(dic[val])>m:
 			m=moy(dic[val])
 	for cl, val in dic.items():
-		if moy
+		if m==moy(dic[cl]):
+			return cl
+
+def fusion(d1,d2):
+	d3={}
+	for k1,v1 in d1.items():
+		for k2,v2 in d2.items():
+			if k1==k2:
+				d3[k1]=v1+v2
+			elif k1 not in d3:
+				d3[k1]=v1
+			elif k2 not in d3:
+				d3[k2]=v2
+	return d3
+
+def pers(dic):
+	for k1,v1 in dic.items():
+		nom=[]
+		for k2,v2 in v1.items():
+			nom.append(v2)
+		print(f"{nom[0]} {nom[1]} a {nom[2]} ans")
+		
+	
+personnes = {"Président" : {"prenom" : 			"Emmanuel", "nom" : "Macron", "age" : 43},"premier" : {"prenom" : "Jean", "nom" : 				"Castex", "age" : 56}}
+pers(personnes)
