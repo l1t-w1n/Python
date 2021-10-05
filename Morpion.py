@@ -105,3 +105,4 @@ dessin.bind('<Button-1>', afficher)
 ##-----Programme principal-----##
 reinit()
 fen.mainloop()
+#bonjour
