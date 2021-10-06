@@ -143,16 +143,29 @@ def graph_fonc():
 #print(graph_fonc())
 
 ##Exercice 18##
+from turtle import *
+from math import *
 
 def Cercle(n):
-   up() 
-   for i in range(0,n-1):
-       
+    up()
+    setpos(0,0)
+    pos={}
+    for i in range(0,n):
         xi=200*cos((2*i*3.14)/n)
         yi=200*sin((2*i*3.14)/n)
-        goto(xi,yi)
-        down()
-#print(Cercle(100))
+        setpos(xi,yi)
+        dot()
+        pos[i]=position()
+    for i in range (0,n):
+        up()
+        j=i*2
+        if j>=n:
+            j=j-n
+        goto(pos[i])
+        pendown()
+        goto(pos[j])
+        
+print(Cercle(100))
 
 ##Exercice 19##
 
