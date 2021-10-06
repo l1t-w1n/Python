@@ -1,5 +1,67 @@
 import math as m
+###Exercice 43###
+def ppd(n):
+    for d in range(2,n+2):
+        if n%d!=0:
+            continue
+        else:
+            return d
 
+###Exercice 44###            
+def nbpremsuiv(n):
+    for d in range(2,n+1):
+        if n%d!=0:
+            continue
+        elif d==n:
+            return True
+        else:
+            return False
+
+###Exercice 45### 
+def nbPremsuiv(n):
+    for d in range(2,n+1):
+        if n%d!=0:
+            continue
+        elif d==n:
+            return n
+        else:
+            return nbpremsuiv(n+1)
+            
+###Exercice 46### 
+def niemeNbPrem(x):
+    n,c=1,0
+    while(c<x):
+        n+=1
+        for i in range(2,n+1):
+            if(n%i==0):
+                break
+        if(i==n):
+            c=c+1
+    return n
+
+###Exercice 47###
+def listutil():
+    l=[]
+    while True:
+      try:
+        n=int(input("Enter number: ")) 
+        if n>=0:
+          l.append(n)  
+          print(l)
+        else:
+          break
+      except ValueError:
+        print("Invalid")
+        continue
+
+###Exercice 48###
+def NnbPrem(n):
+    m=100
+    l=[]
+    while len(l)<n:
+        l+=filter(IsPrime3,range(m-100,m))
+        m+=100
+    return l[:n]
 
 ###Exercice 49###
 def s1(l):
