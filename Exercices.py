@@ -154,6 +154,8 @@ def Cercle(n):
         down()
 #print(Cercle(100))
 
+##Exercice 19##
+
 ##Exercice 20##
 import math as m
 a=5
@@ -385,23 +387,138 @@ def moyenne() :
             print(m)
 #print(moyenne())
 
-##Exercice 43##
-
-       
-    
-    
-
-
-
-
-
-
-
-
-
-
 
 import math as m
+###Exercice 43###
+def ppd(n):
+    for d in range(2,n+2):
+        if n%d!=0:
+            continue
+        else:
+            return d
+
+###Exercice 44###            
+def nbpremsuiv(n):
+    for d in range(2,n+1):
+        if n%d!=0:
+            continue
+        elif d==n:
+            return True
+        else:
+            return False
+
+###Exercice 45### 
+def nbPremsuiv(n):
+    for d in range(2,n+1):
+        if n%d!=0:
+            continue
+        elif d==n:
+            return n
+        else:
+            return nbpremsuiv(n+1)
+            
+###Exercice 46### 
+def niemeNbPrem(x):
+    n,c=1,0
+    while(c<x):
+        n+=1
+        for i in range(2,n+1):
+            if(n%i==0):
+                break
+        if(i==n):
+            c=c+1
+    return n
+
+###Exercice 47###
+def listutil():
+    l=[]
+    while True:
+      try:
+        n=int(input("Enter number: ")) 
+        if n>=0:
+          l.append(n)  
+          print(l)
+        else:
+          break
+      except ValueError:
+        print("Invalid")
+        continue
+
+###Exercice 48###
+def NnbPrem(n):
+    m=100
+    l=[]
+    while len(l)<n:
+        l+=filter(IsPrime3,range(m-100,m))
+        m+=100
+    return l[:n]
+
+###Exercice 49###
+def s1(l):
+    rep=0
+    for i in l:
+        rep+=i
+    return rep
+def s2(l):
+    rep=0
+    for i in range(len(l)):
+        rep+=l[i]
+    return rep
+
+###Exercice 50###
+def exinl(l,x):
+    rep=False
+    for i in range(len(l)):
+        if l[i]==x:
+            rep=True
+            break
+    return rep
+
+###Exercice 51###
+def nbOcc1(l,x):
+    rep=0
+    for i in range(len(l)):
+        if l[i]==x:
+            rep+=1
+    return rep
+
+###Exercice 52###
+def extr(l,x):
+    rep=[]
+    for i in range(len(l)):
+        if l[i]==x:
+            rep.append(i)
+    return rep
+
+###Exercice 53###
+def sansvoy(ch):
+    voy="aeyuo"
+    rep=""
+    for i in ch:
+        if not i in voy:
+            rep+=i
+    return rep
+
+###Exercice 54###
+def max(l):
+    rep=0
+    for i in l:
+        if i>rep:
+            rep=i
+    return rep
+
+###Exercice 55###
+def croissant(l):
+    rep=True
+    for i in range(len(l)):
+        if i==len(l)-1:
+            break
+        elif l[i]<l[i+1]:
+            continue
+        else:
+            rep=False
+            break
+    return rep
 
 ###Exercice 56###
 def motif(tex,mot):
@@ -432,6 +549,179 @@ def preminfn(n):
         l[n]=d*d>n
     return l
 
+###Exercice 58###
+def fusion(l1,l2):
+    l3=[] 
+    for i in l1:
+        l3.append(i)
+    for n in l2:
+        l3.append(n)
+    return l3
+
+###Exercice 59###
+def fusion2(l1,l2):
+    for i in l2:
+        l1.append(i)
+    return l1
+
+###Exercice 60###
+def rotation(l):
+    l1=[]
+    l1.append(l[len(l)-1])
+    l1.append(l[0])
+    for i in range(1,len(l)-1):
+        l1.append(l[i])
+    return l1
+
+###Exercice 61###
+def inv(l):
+    l1=[]
+    for i in range(-1,-len(l)-1,-1):
+        l1.append(l[i])
+    return l1
+
+###Exercice 62###
+def sup(l,r):
+    l1=[]
+    for i in range(len(l)):
+        if i==r:
+            continue
+        else:
+            l1.append(l[i])
+    return l1
+
+###Exercice 63###
+def sup2(l,r):
+    l1=[]
+    for i in l:
+        if i==r:
+            continue
+        else:
+            l1.append(i)
+    return l1
+
+###Exercice 64###
+def tri(l):
+    for i in range(len(l),0,-1):
+        for j in range(i-1):
+            if l[j+1]<l[j]:
+                a=l[j+1]
+                l[j+1]=l[j]
+                l[j]=a
+    return l
+
+###Exercice 65###
+def tir(x,v,alph):
+    g=9.81
+    y=(-g*x**2)/(2*v**2*m.cos(alph)**2)+m.tan(alph)*x
+    return y
+def trajectoire(xmax, n, v, alpha):
+    lsy=[]
+    for i in range(xmax):
+        xi=(i*xmax)/n
+        lsy.append(tir(xi,v,alpha))
+    return lsy
+
+
+###Exercice 66###
+def recherche(l,x):
+	for i in l:
+		if i ==x:
+			return True
+		else:
+			return False
+
+###Exercice 68###
+
+###Exercice 70###
+def rechdic(l, x):
+    mid=int(len(l)/2)
+    if x==l[mid]:
+    	return True
+    elif len(l)==1 and l[0]==x:
+    	return True
+    elif len(l)==1 and l[0]!=x:
+    	return False
+    elif x>l[mid]:
+    	return rechdic(l[mid:],x)
+    else:
+    	return rechdic(l[:mid],x)
+
+###Exercice 72###
+def interpol (l,x):
+    mid=((len(l)-1)*(x-l[0]))/(l[len(l)-1]-l[0])
+    if isinstance(mid,int):
+        if l[mid]==x:
+            return True
+        else:
+            return False
+    elif l[int(mid)]==x:
+        return True
+    elif l[int(mid)+1]==x:
+        return True
+    else:
+        return False
+
+###Exercice 75###
+def som1(n):
+    if n==0:
+        return -2
+    elif n>0:
+        return (-1/3)*s1(n-1)+1
+
+###Exercice 76###
+def somcar(n):
+    if n==1:
+        return 1
+    else:
+        return n**2+somcar(n-1)
+
+###Exercice 77###
+def puis(x,n):
+    if n==0:
+        return 1
+    elif n>0:
+        return x*puis(x,n-1)
+    else:
+        return puis(1/x,-n)
+
+###Exercice 78###
+def puisrap(x,n):
+    if n==0:
+        return 1
+    elif n%2==0:
+        return puis(x**2,n/2)
+    else:
+        return x*puis(x**2,(n-1)/2)
+
+###Exercice 80###
+def nbdec(n):
+    if n<10:
+        return 1
+    else:
+        return 1+nbdec(n//10)
+
+###Exercice 81###
+def somliste(l):
+    if len(l)==0:
+        return 0
+    else:
+        return l[0]+somliste(l[1:])
+
+###Exercice 82###
+def palindrome(l):
+    if len(l)==0 or len(l)==1:
+        return  True
+    elif l[0]==l[len(l)-1]:
+        return palindrome(l[1:-1])
+    else:
+        return False
+
+###Exercice 83###
+
+###Exercice 84###
+l=list(filter(IsPrime3, [i for i in range(1001)]))
+
 ###Exercice 85###
 l=[i for i in range(45,56) if i%2==0]
 l2=[i for i in range(70) if i%7==0]
@@ -439,7 +729,18 @@ l3=[i for i in range(51) if i//10!=2]
 l4=[e+str(i) for i in [1,2,3,4] for e in ['a','b','c']]
 
 ###Exercice 86###
-
+#l1# 
+def imp(n):
+    return n%2!=0
+l=list(filter(imp, [i for i in range(30)]))
+#l2# 
+def mul7(n):
+    return n%7==0
+l=list(filter(mul7, [i for i in range(70)]))
+#l3#  
+def vingtaine(n):
+    return n//10==2
+l=list(filter(not vingtaine, [i for i in range (51)]))    
 #l4#
 def cart(x,y):
     return str(x)+y
@@ -464,7 +765,7 @@ def pairimp(l):
 ###Exercice 88###
 def moins(n,x):
     return n<x
-def sup(n,x):
+def sup3(n,x):
     return n>x
 def split(l):
     l1=list(filter(lambda seq: moins(seq, l[0]),l))
@@ -472,7 +773,6 @@ def split(l):
     l3=list(filter(lambda seq: sup(seq, l[0]),l))
     return l1+l2+l3
 
-###Exercice 89###
 
 ###Exercice 90###
 ventes={"Vincent":14, "Mickael":19, "Michel":15, "Annie":21}
@@ -522,7 +822,7 @@ def bestmoy(dic):
 			return cl
 
 ###Exercice 93###
-def fusion(d1,d2):
+def fusion3(d1,d2):
 	d3={}
 	for k1,v1 in d1.items():
 		for k2,v2 in d2.items():
@@ -548,8 +848,3 @@ l=file1.readlines()
 for i in range(len(l)):
 	print(f"{i+1} {l[i]}")
 file1.close()
-                            
-
-
-
-    
