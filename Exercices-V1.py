@@ -1,5 +1,73 @@
 import math as m
 
+
+###Exercice 49###
+def s1(l):
+    rep=0
+    for i in l:
+        rep+=i
+    return rep
+def s2(l):
+    rep=0
+    for i in range(len(l)):
+        rep+=l[i]
+    return rep
+
+###Exercice 50###
+def exinl(l,x):
+    rep=False
+    for i in range(len(l)):
+        if l[i]==x:
+            rep=True
+            break
+    return rep
+
+###Exercice 51###
+def nbOcc1(l,x):
+    rep=0
+    for i in range(len(l)):
+        if l[i]==x:
+            rep+=1
+    return rep
+
+###Exercice 52###
+def extr(l,x):
+    rep=[]
+    for i in range(len(l)):
+        if l[i]==x:
+            rep.append(i)
+    return rep
+
+###Exercice 53###
+def sansvoy(ch):
+    voy="aeyuo"
+    rep=""
+    for i in ch:
+        if not i in voy:
+            rep+=i
+    return rep
+
+###Exercice 54###
+def max(l):
+    rep=0
+    for i in l:
+        if i>rep:
+            rep=i
+    return rep
+
+###Exercice 55###
+def croissant(l):
+    rep=True
+    for i in range(len(l)):
+        if i==len(l)-1:
+            break
+        elif l[i]<l[i+1]:
+            continue
+        else:
+            rep=False
+            break
+    return rep
+
 ###Exercice 56###
 def motif(tex,mot):
     if len(mot)>len(tex):
@@ -143,7 +211,7 @@ def interpol (l,x):
         return False
 
 ###Exercice 75###
-def s1(n):
+def som1(n):
     if n==0:
         return -2
     elif n>0:
@@ -200,7 +268,7 @@ def palindrome(l):
 ###Exercice 83###
 
 ###Exercice 84###
-l=list(filter(estPremier3, [i for i in range(1001)]))
+l=list(filter(IsPrime3, [i for i in range(1001)]))
 
 ###Exercice 85###
 l=[i for i in range(45,56) if i%2==0]
@@ -245,7 +313,7 @@ def pairimp(l):
 ###Exercice 88###
 def moins(n,x):
     return n<x
-def sup(n,x):
+def sup3(n,x):
     return n>x
 def split(l):
     l1=list(filter(lambda seq: moins(seq, l[0]),l))
@@ -303,7 +371,7 @@ def bestmoy(dic):
 			return cl
 
 ###Exercice 93###
-def fusion(d1,d2):
+def fusion3(d1,d2):
 	d3={}
 	for k1,v1 in d1.items():
 		for k2,v2 in d2.items():

@@ -8,10 +8,15 @@ def isprime(n):
 
 def nnprem(n):
     rep=[]
-    for i in range(1,n):
-        if isprime(i):
+    k=0
+    for i in range(2,n+2):
+        for j in range(2,i):
+            if i%j==0:
+                k+=1
+        if k==0:
             rep.append(i)
+        else:
+            k=0
     return rep
 
-
-print(nnprem(5))
+print(nnprem(3))
