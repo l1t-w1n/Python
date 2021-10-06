@@ -97,12 +97,62 @@ for i in range(0,n):
 
 
 ##Exercice 14##
+from turtle import *
+color("blue")
+forward(100)
+left(72)
+forward(100)
+left(72)
+forward(100)
+left(72)
+forward(100)
+left(72)
+forward(100)
+left(72)
+exitonclick()
+
+from turtle import *
+from math import *
 
 ##Exercice 15##
+
+def Polygone(long,n):
+    for i in range(0,n):
+        forward(long/n)
+        left(360/n)
+#print(Polygone(int(input("la longueur ?")),int(input("le nombre de côté ?"))))
+
 ##Exercice 16##
+
+def Spirale(n):
+    color('green')
+    for i in range(0,n):
+        forward(2+i/4)
+        left(30-i/12)
+#print(Spirale(240))
+
 ##Exercice 17##
+
+def graph_fonc():
+    setup(1000,1000)
+    up()
+    for x in range(-200,200):
+        y=(1/100)*(x**2)
+        goto(x,y)
+        down()
+#print(graph_fonc())
+
 ##Exercice 18##
-##Exercice 19##
+
+def Cercle(n):
+   up() 
+   for i in range(0,n-1):
+       
+        xi=200*cos((2*i*3.14)/n)
+        yi=200*sin((2*i*3.14)/n)
+        goto(xi,yi)
+        down()
+#print(Cercle(100))
 
 ##Exercice 20##
 import math as m
@@ -192,11 +242,154 @@ for n in range(6):
 
 ##Exercice 26##
 
-def af_tab(a):
-    for n in range(10):
+def affiche_table_de_7(a):
+    for n in range(11):
         print(f"{a}*{n}={7*n}")
 
+##Exercice 27##
+def affiche_bonjour() :
+    p=input("Quel est votre prénom ? \n")
+    print(f"Bonjour {p}")
 
+##Exercice 28## 
+def affiche_table(n):
+    for i in range(11):
+        print(f"{n}*{i}={n*i}")
+    
+#print(affiche_table(4))
+
+##Exercice 29##
+def affiche_salutation(formule):
+    p=input("Quel est votre prénom ? \n")
+    print (f"{formule} {p}")
+
+#print(affiche_salutation("Coucou"))
+
+##Exercice 30##
+def demande_prenom_nom():
+    p=input("Quel est votre prénom ? \n")
+    n=input("Quel est votre nom ? \n")
+    print(f"{p} {n.upper()}") 
+
+##Exercice 31##
+def equation_second_deg(a,b,c) :
+    equation = f"{a}*X**2 + {b}*X + {c} = 0"
+    d= b**2 - 4*a*c
+    if d > 0 :
+        x1= ((-b)+m.sqrt(d))/(2*a)
+        x2= ((-b)-m.sqrt(d))/(2*a)
+        print(f"L'équation {equation} admet deux solutions x1={x1} et x2={x2} ")
+    elif d == 0 :
+        x1=-b/(2*a)
+        print(f"L'équation {equation} admet comme unique solution x1={x1}")
+    else :
+        print(f"L'équation n'a pas de solution appartenant à R")
+
+
+##Exercice 32 ## 
+def multiplication(a,b) :
+    n=a
+    for i in range(1,b) :
+       a+=n
+    return a
+print(multiplication(5,6))
+
+##Exercice 33 ##
+def fact(n):
+    if n == 1 :
+        return 1
+    else :
+        return n*fact(n-1)
+#print(fact(5))
+
+##Exercice 34##
+
+def IsPrime(n) :
+    d = 2
+    while n%d != 0 :
+        d+=1
+    return d==n
+
+##Exercice 35##
+
+def IsPrime2(n) :
+    d = 2
+    while d*d <= n and n%d != 0 :
+        d+=1
+    return d*d > n
+
+##Exercice 36##
+
+def IsPrime3(n) :
+    if n %2 == 0 :
+        return n==2
+    d = 3
+    while d*d <= n and n%d != 0 :
+        d+=2
+    return d*d > n
+
+##Exercice 37##
+
+def ListPrime(n):
+    rep=[]
+    for i in range(1,n):
+        if IsPrime3(i):
+            rep.append(i)
+    return rep
+
+
+#print(ListPrime(5))
+
+
+##Exercice 38##
+from turtle import *
+def Polygone(long,n):
+    def main_polygone() :
+        forward(long/n)
+        left(360/n) 
+    for i in range(0,n):
+        if n%2 != 0 :
+            color('green')
+            main_polygone()
+        else :
+            if i%2 == 0 :
+                color('red')
+                main_polygone()
+            else :
+                color('blue')
+                main_polygone()          
+#print(Polygone(int(input("la longueur ?\n")),int(input("le nombre de côté ?\n"))))
+
+##Exercice 41##
+
+def pgcd(a,b) :
+    while a!=b :
+        if a>b :
+            a=a-b
+        else :
+            b=b-a
+    return a 
+
+##Exercice 42##
+def moyenne() :
+    a=b=n=m=0
+
+    while a >= 0 :
+        a = int(input(f"Entrez un nombre :\n"))
+        b+=a
+        n+=1
+        if b==a :
+            print(b)
+        else :  
+            m=b/n
+            print(m)
+#print(moyenne())
+
+##Exercice 43##
+
+       
+    
+    
 
 
 
