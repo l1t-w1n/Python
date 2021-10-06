@@ -1,12 +1,15 @@
-for i in xrange(3, n+1, 2):
-	if (i > 10) and (i%10==5):
-		continue
-	for j in lst:
-		if j*j-1 > i:
-			lst.append(i)
-			break
-		if (i % j == 0):
-			break
-	else:
-		lst.append(i)
-print lst
+numr=int(input("Enter range:"))
+
+print("Prime numbers:",end=' ')
+
+for n in range(1,numr):
+
+    for i in range(2,n):
+
+        if(n%i==0):
+
+            break
+
+    else:
+
+        print(n,end=' ')        
