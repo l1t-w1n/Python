@@ -1,22 +1,21 @@
-def isprime(n):
-    if n%2==0:
-        return n==2
-    d=3
-    while d*d<=n and n%d !=0:
-        d+=2
-    return d*d>n
-
-def nnprem(n):
-    rep=[]
-    k=0
-    for i in range(2,n+2):
-        for j in range(2,i):
-            if i%j==0:
-                k+=1
-        if k==0:
-            rep.append(i)
+def nbpremsuiv(n):
+    for d in range(2,n+1):
+        if n%d!=0:
+            continue
+        elif d==n:
+            return n
         else:
-            k=0
-    return rep
+            return nbpremsuiv(n+1)
 
-print(nnprem(3))
+def niemeNbPrem(x):
+    n,c=1,0
+    while(c<x):
+        n+=1
+        for i in range(2,n+1):
+            if(n%i==0):
+                break
+        if(i==n):
+            c=c+1
+    return n
+
+print(niemeNbPrem(3))
