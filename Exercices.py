@@ -98,14 +98,103 @@ for i in range(0,n):
 
 ##Exercice 14##
 
+##Exercice 15##
+##Exercice 16##
+##Exercice 17##
+##Exercice 18##
+##Exercice 19##
 
+##Exercice 20##
+import math as m
+a=5
+b=4
+c=-1
+equation = f"{a}*X**2 + {b}*X + {c} = 0"
+d= b**2 - 4*a*c
+if d > 0 :
+    x1= ((-b)+m.sqrt(d))/(2*a)
+    x2= ((-b)-m.sqrt(d))/(2*a)
+    print(f"L'équation {equation} admet deux solutions x1={x1} et x2={x2} ")
+elif d == 0 :
+    x1=-b/(2*a)
+    print(f"L'équation {equation} admet comme unique solution x1={x1}")
+else :
+    print(f"L'équation n'a pas de solution appartenant à R")
 
+##Exercice 21##
+import random as r
+a=r.randrange(1,13)
+b=r.randrange(1,13)
+q=int(input(f"Combien vaut le produit de {a} et {b} ?")) 
+if q == a*b :
+    print("Bravo")
+else :
+    print(f"Perdu ! la réponse était {a*b}")
 
+##Exercice 22##
+for c in range(10) :    
+    for d in range(10):
+        for u in range(10):
+            n=100*c+10*d+u
+            if d%2==0 and c+d+u ==15 and (c+u)%7==0 :
+                print(n)
 
+##Exercice 23##
+import math as m
+print("Choisissez trois nombre a, b et c tel que a<=b<=c.")
+a=int(input("Entrez a:\n"))
+b=int(input("Entrez b:\n"))
+c=int(input("Entrez c:\n"))
+if a<=b<=c and (a+b)>c :
+    if c**2==(a**2)+(b**2):
+        print("Le triangle est réctangle")
+    elif a==b==c :
+        print("Le triangle est équilatéral")
+    elif a==b :
+        print("Le triangle est isocèle")
+    else :
+        print("le triangle est quelconque")
 
+if m.cos(a) + m.cos(b) + m.cos(c) >= 0:
+   print("angle aigu")
+else:
+   print("angle obtus")
 
+##Exercice 24##
 
+import random as ra
+a=ra.randint(0,99)
+5
+for n in range(6):
+    r=int(input("enter r"))
+    if r==a:
+        print("c'est correcte")
+        break
+    elif r>a:
+        print("r est trop grand")
+    else:
+        print("r est trop petit")
 
+##Exercice 25##
+import random as ra
+a=ra.randint(0,99)
+5
+for n in range(6):
+    a+=ra.randint(-3,3)
+    r=int(input("enter r"))
+    if r==a:
+        print("c'est correcte")
+        break
+    elif r>a:
+        print("r est trop grand")
+    else:
+        print("r est trop petit")
+
+##Exercice 26##
+
+def af_tab(a):
+    for n in range(10):
+        print(f"{a}*{n}={7*n}")
 
 
 
