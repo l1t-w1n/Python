@@ -96,7 +96,7 @@ for i in range(0,n):
 
 
 
-######Exercice 14########
+##Exercice 14##
 from turtle import *
 color("blue")
 forward(100)
