@@ -173,6 +173,36 @@ def Cercle(n):
 print(Cercle(100))
 
 ##Exercice 19##
+from turtle import *
+def tortues_course():
+    tortue1= Turtle()
+    tortue2= Turtle()
+    tortue3= Turtle()
+    tortue4= Turtle()
+    tortue1.color('red')
+    tortue2.color('blue')
+    tortue3.color('orange')
+    tortue4.color('green')
+    tortue1.up()
+    tortue2.up()
+    tortue3.up()
+    tortue4.up()
+    tortue1.setposition(-200,-200)
+    tortue2.setposition(200,-200)
+    tortue3.setposition(200,200)
+    tortue4.setposition(-200,200)
+    tortue1.down()
+    tortue2.down()
+    tortue3.down()
+    tortue4.down()
+    tortue1.setheading(0)
+    tortue1.forward(400)
+    tortue2.setheading(90)
+    tortue2.forward(400)
+    tortue3.setheading(180)
+    tortue3.forward(400)
+    tortue4.setheading(270)
+    tortue4.forward(400)
 
 
 #-----------------------------------5)Si Alors Sinon----------------------------------------------
@@ -807,7 +837,7 @@ def nonpair(n):
     return n%2!=0
 def pairimp(l):
     l1=list(filter(estpair,l))
-    l2=list(filter(nestpair,l))
+    l2=list(filter(nonpair,l))
     return l1+l2
 
 ###Exercice 88###
