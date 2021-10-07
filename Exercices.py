@@ -803,7 +803,7 @@ for n in range(len(b)):
 ###Exercice 87###
 def estpair(n):
     return n%2==0
-def nestpair(n):
+def nonpair(n):
     return n%2!=0
 def pairimp(l):
     l1=list(filter(estpair,l))
@@ -826,12 +826,12 @@ def split(l):
 
 ###Exercice 90###
 ventes={"Vincent":14, "Mickael":19, "Michel":15, "Annie":21}
-def ventot(v):
+def ventes_tot(v):
     c=0
     for i in v.keys():
         c+=v[i]
     return c
-def plusvent(v):
+def best_vendeur(v):
     c=0
     for i in v.keys():
         if v[i]>c:
@@ -841,8 +841,8 @@ def plusvent(v):
             return cl
 
 ###Exercice 91###
-def nOcc(chaine):
-	nbOcc={}
+def fréquence_de_lettres(chaine):
+	frq={}
 	alph="abcdefghijklmnopqrstuvwxyz"
 	for i in alph:
 		cpt=0
@@ -850,8 +850,8 @@ def nOcc(chaine):
 			if i==n:
 				cpt+=1
 		if cpt!=0:
-			nbOcc[i]=cpt
-	return nbOcc
+			frq[i]=cpt
+	return frq
 
 ###Exercice 92###
 def moy(l):
