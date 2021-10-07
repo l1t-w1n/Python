@@ -1,3 +1,6 @@
+
+#-----------------------------------1)Mode interactif----------------------------------------------
+
 ##Exercice 4##
 import math as m
 a=5
@@ -24,6 +27,7 @@ a=b
 b=c
 """
 
+#-----------------------------------2)Editeur----------------------------------------------
 
 ##Exercice 7##
 """
@@ -49,6 +53,7 @@ print(calculatrice(a=int(input("valeur de a ? ")),\
 b=int(input("valeur de b ? ")),\
 ope=input("l'opération ? ")))
 
+#-----------------------------------3)Boucle for----------------------------------------------
 
 ##Exercice 9##
 import math as m
@@ -94,7 +99,7 @@ for i in range(0,n):
         print("*",end=" ")
     print()
 
-
+#-----------------------------------4)Turtle---------------------------------------------
 
 ##Exercice 14##
 from turtle import *
@@ -169,6 +174,9 @@ print(Cercle(100))
 
 ##Exercice 19##
 
+
+#-----------------------------------5)Si Alors Sinon----------------------------------------------
+
 ##Exercice 20##
 import math as m
 a=5
@@ -239,6 +247,8 @@ for n in range(6):
         print("r est trop grand")
     else:
         print("r est trop petit")
+
+#-----------------------------------6)Fonction----------------------------------------------
 
 ##Exercice 25##
 import random as ra
@@ -375,6 +385,8 @@ def Polygone(long,n):
                 main_polygone()          
 #print(Polygone(int(input("la longueur ?\n")),int(input("le nombre de côté ?\n"))))
 
+#-----------------------------------7)Boucle tant que----------------------------------------------
+
 ##Exercice 41##
 
 def pgcd(a,b) :
@@ -441,6 +453,8 @@ def niemeNbPrem(x):
         if(i==n):
             c=c+1
     return n
+
+#-----------------------------------8)Liste----------------------------------------------
 
 ###Exercice 47###
 def listutil():
@@ -635,16 +649,23 @@ def trajectoire(xmax, n, v, alpha):
         lsy.append(tir(xi,v,alpha))
     return lsy
 
+#-----------------------------------9)Activité recherche d'éléments----------------------------------------------
 
 ###Exercice 66###
 def recherche(l,x):
 	for i in l:
-		if i ==x:
+		if l[i] ==x:
 			return True
 		else:
 			return False
 
 ###Exercice 68###
+def recherche(l,x):
+	for i in l:
+		if l[i] ==x:
+			return True
+		elif x<l[i]:
+			return False
 
 ###Exercice 70###
 def rechdic(l, x):
@@ -675,6 +696,7 @@ def interpol (l,x):
     else:
         return False
 
+#-----------------------------------10)Récursivité----------------------------------------------
 ###Exercice 75###
 def som1(n):
     if n==0:
@@ -731,6 +753,19 @@ def palindrome(l):
         return False
 
 ###Exercice 83###
+def partition(p,q) :
+    if p == 0 :
+        return 1
+    elif q == 0 :
+        return 0
+    elif p<q :
+        return partition(p,p)
+    else :
+        return partition(p-q,q) + partition(p,q-1)
+
+#print(partition(5,3))
+
+#-----------------------------------11)Liste 2----------------------------------------------
 
 ###Exercice 84###
 l=list(filter(IsPrime3, [i for i in range(1001)]))
@@ -785,6 +820,8 @@ def split(l):
     l2=[l[0]]
     l3=list(filter(lambda seq: sup(seq, l[0]),l))
     return l1+l2+l3
+
+#-----------------------------------12)Dictionnaires----------------------------------------------
 
 
 ###Exercice 90###
@@ -854,6 +891,8 @@ def pers(dic):
 		for k2,v2 in v1.items():
 			nom.append(v2)
 		print(f"{nom[0]} {nom[1]} a {nom[2]} ans")
+
+#-----------------------------------13)Fichier----------------------------------------------
 
 ###Exercice 95,96###
 file1=open("1.txt", "r")
