@@ -1,11 +1,11 @@
-<<<<<<< HEAD:Exercices.py
+
 from math import *
 from turtle import *
 import random as r
-=======
+
 
 #-----------------------------------1)Mode interactif----------------------------------------------
->>>>>>> 2fe09c5c5cf982d2945ccc2374f07035f0378123:Poly_remise_à_niveau_Python.py
+
 
 ##Exercice 4##
 a=5
@@ -28,15 +28,13 @@ b=11
 c=a
 a=b
 b=c
-<<<<<<< HEAD:Exercices.py
-=======
 
 
 #-----------------------------------2)Editeur----------------------------------------------
->>>>>>> 2fe09c5c5cf982d2945ccc2374f07035f0378123:Poly_remise_à_niveau_Python.py
+
 
 ##Exercice 7##
-print(EquationDuSecondDegre(a=int(input("valeur de a ? ")),\
+print(equation(a=int(input("valeur de a ? ")),\
 b=int(input("valeur de b ? ")),\
 c=float(input("valeur de c ? "))))
 
@@ -98,11 +96,9 @@ for i in range(0,n):
         print("*",end=" ")
     print()
 
-<<<<<<< HEAD:Exercices.py
-=======
 #-----------------------------------4)Turtle---------------------------------------------
 
->>>>>>> 2fe09c5c5cf982d2945ccc2374f07035f0378123:Poly_remise_à_niveau_Python.py
+
 ##Exercice 14##
 color("blue")
 forward(100)
@@ -140,7 +136,6 @@ def graph_fonc():
         down()
 
 ##Exercice 18##
-<<<<<<< HEAD:Exercices.py
 def Cercle(n):
    up() 
    for i in range(0,n-1):       
@@ -148,7 +143,6 @@ def Cercle(n):
         yi=200*sin((2*i*3.14)/n)
         goto(xi,yi)
         down()
-=======
 from turtle import *
 from math import *
 
@@ -172,7 +166,7 @@ def Cercle(n):
         goto(pos[j])
         
 print(Cercle(100))
->>>>>>> 2fe09c5c5cf982d2945ccc2374f07035f0378123:Poly_remise_à_niveau_Python.py
+
 
 ##Exercice 19##
 from turtle import *
@@ -279,7 +273,7 @@ for n in range(6):
 ##Exercice 25##
 a=r.randint(0,99)
 for n in range(6):
-    a+=ra.randint(-3,3)
+    a+=r.randint(-3,3)
     R=int(input("enter r"))
     if R==a:
         print("c'est correcte")
@@ -821,12 +815,10 @@ def split2(l):
     l3=list(filter(lambda seq: sup(seq, l[0]),l))
     return l1+l2+l3
 
-<<<<<<< HEAD:Exercices.py
-=======
 #-----------------------------------12)Dictionnaires----------------------------------------------
 
 
->>>>>>> 2fe09c5c5cf982d2945ccc2374f07035f0378123:Poly_remise_à_niveau_Python.py
+
 ###Exercice 90###
 ventes={"Vincent":14, "Mickael":19, "Michel":15, "Annie":21}
 def ventes_tot(v):
